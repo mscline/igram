@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
+#import "ParseLoginManager.h"
 
 @interface AppDelegate ()
 
@@ -16,9 +18,45 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+
+    [ParseLoginManager setupParseInAppDelegateWithAppID:@"5ntrmifzp3BcYfH1bViDsN5mG4JCHWHMhYkSYfeR"
+                                       clientKey:@"jkMLszd3rY5agAwtAj4HWPGk9hszmQxBWnr3WjSg"
+                                  forApplication:application];
+
     return YES;
 }
+
+
+/*#pragma mark PUSH DELEGATES
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
+}
+
+
+// TO DO
+// Upload your .p12 certificate in the Apple Push certificates section of your app's push settings. If you don't have your .p12 certificate file, head on over to our provisioning tutorial and go through sections 1 through 4 to correctly configure your app and obtain the .p12 certificate file.
+// https://www.parse.com/apps/quickstart#parse_push/ios/existing
+
+
+*/
+
+
+
+
+
+
+
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
