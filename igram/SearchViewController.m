@@ -60,7 +60,7 @@
     cell.caption.text = photo.caption;
     cell.backgroundColor = [UIColor redColor];
 
-    [photo downloadImageToImageView:cell.photo forIndexPath:indexPath];
+    [photo downloadImageAndUpdateImageView:cell.photo forIndexPath:indexPath];
 
     return cell;
 

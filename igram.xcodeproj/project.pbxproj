@@ -39,6 +39,7 @@
 		AE5009D21A435D5200A0DCCC /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5009D11A435D5200A0DCCC /* ProfileViewController.m */; };
 		AE5009D51A435D8800A0DCCC /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5009D41A435D8800A0DCCC /* PhotoDetailViewController.m */; };
 		AE5009D81A435E8200A0DCCC /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5009D71A435E8200A0DCCC /* TabBarViewController.m */; };
+		AE9977BB1A43C651005CC9EC /* MCBuildAttributedText.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9977BA1A43C651005CC9EC /* MCBuildAttributedText.m */; };
 		AEC6DBAA1A421FFD008E968C /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6DBA91A421FFD008E968C /* Comment.m */; };
 		AEC6DBAD1A42200A008E968C /* Like.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6DBAC1A42200A008E968C /* Like.m */; };
 		AEC6DBB01A422019008E968C /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6DBAF1A422019008E968C /* Photo.m */; };
@@ -104,6 +105,8 @@
 		AE5009D41A435D8800A0DCCC /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
 		AE5009D61A435E8200A0DCCC /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = igram/TabBarViewController.h; sourceTree = "<group>"; };
 		AE5009D71A435E8200A0DCCC /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = igram/TabBarViewController.m; sourceTree = "<group>"; };
+		AE9977B91A43C651005CC9EC /* MCBuildAttributedText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCBuildAttributedText.h; sourceTree = "<group>"; };
+		AE9977BA1A43C651005CC9EC /* MCBuildAttributedText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCBuildAttributedText.m; sourceTree = "<group>"; };
 		AEC6DBA81A421FFD008E968C /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
 		AEC6DBA91A421FFD008E968C /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		AEC6DBAB1A42200A008E968C /* Like.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Like.h; sourceTree = "<group>"; };
@@ -158,6 +161,8 @@
 			children = (
 				AE04BA9C1A43A04700F1B6D4 /* PhotoPickerCode.h */,
 				AE04BA9D1A43A04700F1B6D4 /* PhotoPickerCode.m */,
+				AE9977B91A43C651005CC9EC /* MCBuildAttributedText.h */,
+				AE9977BA1A43C651005CC9EC /* MCBuildAttributedText.m */,
 				AE5009D91A43661400A0DCCC /* Login */,
 			);
 			name = "Abstracted Code";
@@ -414,6 +419,7 @@
 				AE5009D81A435E8200A0DCCC /* TabBarViewController.m in Sources */,
 				AEC6DBBE1A427AC7008E968C /* CollectionViewCell.m in Sources */,
 				AE5009D51A435D8800A0DCCC /* PhotoDetailViewController.m in Sources */,
+				AE9977BB1A43C651005CC9EC /* MCBuildAttributedText.m in Sources */,
 				AE09FB031A417DA300841D98 /* ParseLoginManager.m in Sources */,
 				AE04BA9E1A43A04700F1B6D4 /* PhotoPickerCode.m in Sources */,
 			);

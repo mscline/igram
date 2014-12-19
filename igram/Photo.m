@@ -61,9 +61,10 @@
 
 }
 
+
 #pragma mark Instance Methods
 
--(void)downloadImageToImageView:(UIImageView *)view forIndexPath:(NSIndexPath *)indexPath
+-(void)downloadImageAndUpdateImageView:(UIImageView *)view forIndexPath:(NSIndexPath *)indexPath
 {
 
     // save index so can exit if cell is reused for different index path

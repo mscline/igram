@@ -22,6 +22,10 @@
   // Local Properties
   @property UIImage *photoImage;  // when download, can use just grab the image here
 
-  -(void)downloadImageToImageView:(UIImageView *)view forIndexPath:(NSIndexPath *)indexPath;
+
+
+  +(void)addPhoto:(UIImage *)image caption:(NSString *)caption completionBlock:(void(^)())completionBlock;
+
+  -(void)downloadImageAndUpdateImageView:(UIImageView *)view forIndexPath:(NSIndexPath *)indexPath;
 
 @end
