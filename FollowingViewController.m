@@ -7,8 +7,9 @@
 //
 
 #import "FollowingViewController.h"
+#import "TabBarViewController.h"
 
-@interface FollowingViewController ()
+@interface FollowingViewController () <TabBarItemSelected>
 
 @end
 
@@ -19,10 +20,8 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+-(void)tabBarItemWasSelected
+{}
 
 /*
 #pragma mark - Navigation

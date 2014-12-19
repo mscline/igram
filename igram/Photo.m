@@ -27,14 +27,19 @@
     
 }
 
+
+#pragma Upload Photo
+
 +(void)addPhoto:(UIImage *)image caption:(NSString *)caption completionBlock:(void(^)())completionBlock
 {
 
     Photo *photo = [Photo object];
-    photo.imageFile = [self fileFromImage:image];
+    photo.imageFile = [self createPFFileForImage:image];
     photo.caption = caption;
     photo.date = [NSDate date];
-    photo.byUser = [UserRecord returnOurUsersID];
+
+    UserRecord *userRecord = [UserRecord returnOurUsersUserObject];
+    photo.byUser = userRecord;  // MUST DO IN 2 STEPS!!!
 
     [photo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
 
@@ -51,7 +56,7 @@
 }
 
 
-+(PFFile *)fileFromImage:(UIImage *)image
++(PFFile *)createPFFileForImage:(UIImage *)image
 {
 
     NSData *imageData = UIImagePNGRepresentation(image);
@@ -62,7 +67,20 @@
 }
 
 
-#pragma mark Instance Methods
+#pragma mark Download Photos
+
++(void)downloadPhotosWithCompletionBlock:(void(^)(NSArray *objects))completionBlock
+{
+
+    PFQuery *query = [self query];
+    //[query whereKey:<#(NSString *)#> equalTo:<#(id)#>]
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+
+        completionBlock(objects);
+
+    }];
+    
+}
 
 -(void)downloadImageAndUpdateImageView:(UIImageView *)view forIndexPath:(NSIndexPath *)indexPath
 {
@@ -88,7 +106,7 @@
 -(int)uniqueIntForIndexPath:(NSIndexPath *)indexPath
 {
 
-    return (int)indexPath.section * 1000000 + (int)indexPath.row;
+    return (int)indexPath.section * 10000000 + (int)indexPath.row;
 
 }
 

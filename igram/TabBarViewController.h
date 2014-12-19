@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol TabBarItemSelected <NSObject>
+
+  -(void)tabBarItemWasSelected;
+
+@end
+
 @interface TabBarViewController : UITabBarController
 
 @end

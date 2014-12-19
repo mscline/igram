@@ -11,7 +11,7 @@
 #import "UserRecord.h"
 
 
-@interface TabBarViewController ()
+@interface TabBarViewController () <UITabBarControllerDelegate>
 
   @property ParseLoginManager *loginManager;
 
@@ -36,5 +36,13 @@
     
 }
 
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+
+    // tell view controller corresponding tab selected
+    id<TabBarItemSelected>selectedVC = (id)self.selectedViewController;
+    [selectedVC tabBarItemWasSelected];
+    
+}
 
 @end

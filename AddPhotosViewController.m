@@ -7,11 +7,14 @@
 //
 
 #import "AddPhotosViewController.h"
+#import "TabBarViewController.h"
 #import "PhotoPickerCode.h"
+#import "MCBuildAttributedText.h"
+
 #import "Photo.h"
 
 
-@interface AddPhotosViewController () <MCCameraAndPhotoPicker>
+@interface AddPhotosViewController () <MCCameraAndPhotoPicker, TabBarItemSelected>
 
   @property (weak, nonatomic) IBOutlet UIImageView *imageView;
   @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -37,6 +40,8 @@
 
 }
 
+-(void)tabBarItemWasSelected
+{}
 
 #pragma mark Buttons
 
@@ -75,37 +80,40 @@
 -(void)photoUploadComplete
 {
 
-
+    [self changeBackgroundColorTemporarilyWithDuration:2.0 color:[UIColor greenColor]];
 
 }
 
 -(void)notifyUserThatNoImage
 {
 
-    UIColor *backgroundColor = self.view.backgroundColor;
-    //UIColor *imageViewColor = self.imageView.backgroundColor;
+    [self changeBackgroundColorTemporarilyWithDuration:.3 color:[UIColor redColor]];
 
-    [UIView animateWithDuration:.15 animations:^{
-
-        self.view.backgroundColor = [UIColor redColor];
-
-    } completion:^(BOOL finished) {
-
-        self.view.backgroundColor = backgroundColor;
-        
-    }];
-
+    // change ImageView to black
     [UIView animateWithDuration:3 animations:^{
 
         self.imageView.backgroundColor = [UIColor blackColor];
 
-    } completion:^(BOOL finished) {
-
-        //self.imageView.backgroundColor = imageViewColor;
-
-    }];
+    } completion:^(BOOL finished) {}];
 
 }
+
+-(void)changeBackgroundColorTemporarilyWithDuration:(float)duration color:(UIColor *)color
+{
+
+    UIColor *backgroundColor = self.view.backgroundColor;
+
+    self.view.backgroundColor = color;
+
+    [UIView animateWithDuration:duration animations:^{
+
+        self.view.backgroundColor = backgroundColor;
+
+    } completion:^(BOOL finished) {}];
+
+
+}
+
 
 #pragma mark Photo Picker
 

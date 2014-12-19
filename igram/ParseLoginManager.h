@@ -11,10 +11,11 @@
 @interface ParseLoginManager : NSObject 
 
 
+  // step 1:
   +(void)setupParseInAppDelegateWithAppID:(NSString *)appId clientKey:(NSString *)key forApplication:(UIApplication *)application;
 
+  // step 2: create a ParseLoginManager object (save as a property or will be dealloced) and run
   -(void)presentLoginScreenFromRootVCsViewDidAppear:(UIViewController *)vc;
-        // rem: when you create a ParseLogin object, you will need to keep it around to handle the delegate calls
 
 
 @end

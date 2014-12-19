@@ -7,18 +7,27 @@
 //
 
 #import "SearchViewController.h"
+#import "TabBarViewController.h"
+
 #import <Parse/Parse.h>
 #import "ParseLoginManager.h"
+#import "MCBuildAttributedText.h"
+
 #import "UserRecord.h"
-#import "CollectionViewCell.h"
 #import "Photo.h"
 
-@interface SearchViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+#import "CollectionViewCell.h"
+
+
+@interface SearchViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, TabBarItemSelected>
 
   @property ParseLoginManager *loginManager;
   @property NSMutableArray *dataForDisplay;
 
+  @property (weak, nonatomic) IBOutlet UICollectionView *collectionV;
+
 @end
+
 
 @implementation SearchViewController 
 
@@ -30,10 +39,30 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
-    self.loginManager = [ParseLoginManager new];
-    [self.loginManager presentLoginScreenFromRootVCsViewDidAppear:self];
+    // since default view
+    [self tabBarItemWasSelected];
 
 }
+
+-(void)tabBarItemWasSelected
+{
+
+    [Photo downloadPhotosWithCompletionBlock:^(NSArray *objects) {
+
+        [self downloadOfPhotosIsComplete:objects];
+
+    }];
+}
+
+
+-(void)downloadOfPhotosIsComplete:(NSArray *)array
+{
+
+    self.dataForDisplay = array.mutableCopy;
+    [self.collectionV reloadData];
+
+}
+
 
 #pragma mark CollectionView Data Source
 
@@ -57,12 +86,42 @@
     CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"a" forIndexPath:indexPath];
 
     Photo *photo = [self.dataForDisplay objectAtIndex:indexPath.row];
-    cell.caption.text = photo.caption;
     cell.backgroundColor = [UIColor redColor];
+    cell.caption.attributedText = [self formatLabel:photo.caption];
 
     [photo downloadImageAndUpdateImageView:cell.photo forIndexPath:indexPath];
 
     return cell;
+
+}
+
+-(NSAttributedString *)formatLabel:(NSString *)str
+{
+
+    // if no string, exit
+    if(!str || str.length == 0){ return [NSAttributedString new]; };
+
+
+    // want to make first letter bigger
+    // divide into two strings
+    NSString *str1 = [str substringToIndex:1];
+    NSString *str2 = [str substringFromIndex:1];
+
+    // format
+    NSAttributedString *text1 = [MCBuildAttributedText createAttributedString:str1
+                                         withFont:@"Palatino-Roman"
+                                         fontSize:18.0 fontColor:[UIColor blueColor]
+                             nsTextAlignmentStyle:NSTextAlignmentCenter];
+
+    NSAttributedString *text2 = [MCBuildAttributedText createAttributedString:str2
+                                                                    withFont:@"Palatino-Roman"
+                                                                    fontSize:14.0 fontColor:[UIColor blackColor]
+                                                        nsTextAlignmentStyle:NSTextAlignmentCenter];
+
+    // combine & return
+    return [MCBuildAttributedText combineAttributedStrings:[NSArray arrayWithObjects:
+                                                            text1, text2, nil]];
+
 
 }
 

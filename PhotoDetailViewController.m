@@ -8,7 +8,7 @@
 
 #import "PhotoDetailViewController.h"
 
-@interface PhotoDetailViewController ()
+@interface PhotoDetailViewController () 
 
 @end
 

@@ -7,8 +7,9 @@
 //
 
 #import "ProfileViewController.h"
+#import "TabBarViewController.h"
 
-@interface ProfileViewController ()
+@interface ProfileViewController () <TabBarItemSelected>
 
 @end
 
@@ -23,6 +24,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)tabBarItemWasSelected
+{}
 
 /*
 #pragma mark - Navigation

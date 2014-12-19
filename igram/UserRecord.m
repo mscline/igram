@@ -84,7 +84,7 @@ Block completionBlock;  // for when add user for the first time
 
 #pragma mark Other Class Methods
 
-+(UserRecord *)returnOurUsersID
++(UserRecord *)returnOurUsersUserObject
 {
 
     return ourUser;

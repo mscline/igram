@@ -228,6 +228,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="Vkh-IO-jwO"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="kHb-Eg-veP"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -261,6 +265,9 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" id="ogQ-eF-ruy"/>
+                    <connections>
+                        <outlet property="collectionV" destination="azj-ic-Hbu" id="hHw-lQ-O0j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

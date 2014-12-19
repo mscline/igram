@@ -23,6 +23,6 @@ typedef void(^Block)();
   @property PFUser *parseUser;
 
   +(void)createNewUserRecordIfRequired:(Block)runBlock;  
-  +(UserRecord *)returnOurUsersID;
+  +(UserRecord *)returnOurUsersUserObject;
 
 @end

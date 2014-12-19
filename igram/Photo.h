@@ -25,7 +25,8 @@
 
 
   +(void)addPhoto:(UIImage *)image caption:(NSString *)caption completionBlock:(void(^)())completionBlock;
-
+  +(void)downloadPhotosWithCompletionBlock:(void(^)(NSArray *objects))completionBlock
+;
   -(void)downloadImageAndUpdateImageView:(UIImageView *)view forIndexPath:(NSIndexPath *)indexPath;
 
 @end
