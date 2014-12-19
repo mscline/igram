@@ -7,31 +7,54 @@
 //
 
 #import "AddPhotosViewController.h"
+#import "PhotoPickerCode.h"
 
-@interface AddPhotosViewController ()
+
+@interface AddPhotosViewController () <MCCameraAndPhotoPicker>
+
+  @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+  @property UIImage *imageForDisplay;
 
 @end
+
 
 @implementation AddPhotosViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+
+    self.imageView.backgroundColor = [UIColor redColor];
+    self.imageView.image = self.imageForDisplay;
+
+}
+- (IBAction)onButtonPressedSelectPhoto:(id)sender {
+
+    [self showPhotoPicker];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark Photo Picker
+
+-(void)showPhotoPicker
+{
+
+    PhotoPickerCode *pickerManager = [PhotoPickerCode new];
+    [pickerManager presentPhotoPickerViewControllerFromVC:self];
+
 }
-*/
+
+-(void)yourNewPhotoIsHere:(UIImage *)image
+{
+
+    self.imageForDisplay = image;
+
+}
+
+
 
 @end

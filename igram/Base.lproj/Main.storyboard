@@ -15,6 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Gtf-ho-E6G"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fQ4-NQ-e7f">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -33,6 +34,7 @@
                         <viewControllerLayoutGuide type="bottom" id="67H-tz-vHe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wS7-ZM-UiQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -45,16 +47,34 @@
         <!--+ Photos-->
         <scene sceneID="xrp-LI-xfE">
             <objects>
-                <viewController id="Fkc-BL-Kfw" sceneMemberID="viewController">
+                <viewController id="Fkc-BL-Kfw" customClass="AddPhotosViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="K82-Q2-E6V"/>
                         <viewControllerLayoutGuide type="bottom" id="GIq-xw-yCs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PgH-jE-baY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEJ-eM-dXC">
+                                <rect key="frame" x="227" y="42" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onButtonPressedSelectPhoto:" destination="Fkc-BL-Kfw" eventType="touchUpInside" id="WA2-O0-s7e"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J9o-pG-m6X">
+                                <rect key="frame" x="187" y="117" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="+ Photos" id="sVP-FP-n73"/>
+                    <connections>
+                        <outlet property="imageView" destination="J9o-pG-m6X" id="PI0-Uz-2vb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhQ-NL-AX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,6 +110,7 @@
                         <viewControllerLayoutGuide type="bottom" id="9gx-we-ZEl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ns5-Bh-aOg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -163,9 +184,6 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
-                                </variation>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

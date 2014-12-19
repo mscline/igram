@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE04BA9E1A43A04700F1B6D4 /* PhotoPickerCode.m in Sources */ = {isa = PBXBuildFile; fileRef = AE04BA9D1A43A04700F1B6D4 /* PhotoPickerCode.m */; };
 		AE09FABD1A4171F300841D98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE09FABC1A4171F300841D98 /* main.m */; };
 		AE09FAC01A4171F300841D98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE09FABF1A4171F300841D98 /* AppDelegate.m */; };
 		AE09FAC31A4171F300841D98 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE09FAC21A4171F300841D98 /* SearchViewController.m */; };
@@ -57,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE04BA9C1A43A04700F1B6D4 /* PhotoPickerCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPickerCode.h; sourceTree = "<group>"; };
+		AE04BA9D1A43A04700F1B6D4 /* PhotoPickerCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerCode.m; sourceTree = "<group>"; };
 		AE09FAB71A4171F300841D98 /* igram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = igram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE09FABB1A4171F300841D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE09FABC1A4171F300841D98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -150,6 +153,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE04BA9F1A43A0C900F1B6D4 /* Abstracted Code */ = {
+			isa = PBXGroup;
+			children = (
+				AE04BA9C1A43A04700F1B6D4 /* PhotoPickerCode.h */,
+				AE04BA9D1A43A04700F1B6D4 /* PhotoPickerCode.m */,
+				AE5009D91A43661400A0DCCC /* Login */,
+			);
+			name = "Abstracted Code";
+			path = ..;
+			sourceTree = "<group>";
+		};
 		AE09FAAE1A4171F300841D98 = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +185,7 @@
 		AE09FAB91A4171F300841D98 /* igram */ = {
 			isa = PBXGroup;
 			children = (
-				AE5009D91A43661400A0DCCC /* Login */,
+				AE04BA9F1A43A0C900F1B6D4 /* Abstracted Code */,
 				AEC6DBBB1A427A74008E968C /* Controller */,
 				AE146EDC1A42046800CEDB26 /* Model */,
 				AEC6DBBA1A427A5C008E968C /* View */,
@@ -251,7 +265,6 @@
 				AE146EDE1A4204B100CEDB26 /* UserRecord.m */,
 			);
 			name = Login;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		AEC6DBBA1A427A5C008E968C /* View */ = {
@@ -402,6 +415,7 @@
 				AEC6DBBE1A427AC7008E968C /* CollectionViewCell.m in Sources */,
 				AE5009D51A435D8800A0DCCC /* PhotoDetailViewController.m in Sources */,
 				AE09FB031A417DA300841D98 /* ParseLoginManager.m in Sources */,
+				AE04BA9E1A43A04700F1B6D4 /* PhotoPickerCode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
