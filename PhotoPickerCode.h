@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+// 1) create new PhotoPickerCode object and store as property (or will deallocate)
+// 2) run presentPhotoPickerViewControllerFromVC
+// 3) implement yourNewPhotIsHere protocol method
 
 @protocol MCCameraAndPhotoPicker <NSObject>
 

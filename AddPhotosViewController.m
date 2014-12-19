@@ -14,6 +14,7 @@
 
   @property (weak, nonatomic) IBOutlet UIImageView *imageView;
   @property UIImage *imageForDisplay;
+  @property PhotoPickerCode *pickerManager;
 
 @end
 
@@ -43,8 +44,8 @@
 -(void)showPhotoPicker
 {
 
-    PhotoPickerCode *pickerManager = [PhotoPickerCode new];
-    [pickerManager presentPhotoPickerViewControllerFromVC:self];
+    self.pickerManager = [PhotoPickerCode new];
+    [self.pickerManager presentPhotoPickerViewControllerFromVC:self];
 
 }
 
