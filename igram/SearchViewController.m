@@ -11,7 +11,7 @@
 
 #import <Parse/Parse.h>
 #import "ParseLoginManager.h"
-#import "MCBuildAttributedText.h"
+#import "CustomTextFormatter.h"
 
 #import "UserRecord.h"
 #import "Photo.h"
@@ -47,13 +47,18 @@
 -(void)tabBarItemWasSelected
 {
 
+    [self downloadPhotos];
+    
+}
+
+-(void)downloadPhotos
+{
     [Photo downloadPhotosWithCompletionBlock:^(NSArray *objects) {
 
         [self downloadOfPhotosIsComplete:objects];
 
     }];
 }
-
 
 -(void)downloadOfPhotosIsComplete:(NSArray *)array
 {
@@ -87,7 +92,7 @@
 
     Photo *photo = [self.dataForDisplay objectAtIndex:indexPath.row];
     cell.backgroundColor = [UIColor redColor];
-    cell.caption.attributedText = [self formatLabel:photo.caption];
+    cell.caption.attributedText = [CustomTextFormatter formatLabel:photo.caption];
 
     [photo downloadImageAndUpdateImageView:cell.photo forIndexPath:indexPath];
 
@@ -95,34 +100,5 @@
 
 }
 
--(NSAttributedString *)formatLabel:(NSString *)str
-{
-
-    // if no string, exit
-    if(!str || str.length == 0){ return [NSAttributedString new]; };
-
-
-    // want to make first letter bigger
-    // divide into two strings
-    NSString *str1 = [str substringToIndex:1];
-    NSString *str2 = [str substringFromIndex:1];
-
-    // format
-    NSAttributedString *text1 = [MCBuildAttributedText createAttributedString:str1
-                                         withFont:@"Palatino-Roman"
-                                         fontSize:18.0 fontColor:[UIColor blueColor]
-                             nsTextAlignmentStyle:NSTextAlignmentCenter];
-
-    NSAttributedString *text2 = [MCBuildAttributedText createAttributedString:str2
-                                                                    withFont:@"Palatino-Roman"
-                                                                    fontSize:14.0 fontColor:[UIColor blackColor]
-                                                        nsTextAlignmentStyle:NSTextAlignmentCenter];
-
-    // combine & return
-    return [MCBuildAttributedText combineAttributedStrings:[NSArray arrayWithObjects:
-                                                            text1, text2, nil]];
-
-
-}
 
 @end

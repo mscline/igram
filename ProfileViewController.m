@@ -8,34 +8,70 @@
 
 #import "ProfileViewController.h"
 #import "TabBarViewController.h"
+#import "CollectionViewCellForProfilePhotos.h"
 
-@interface ProfileViewController () <TabBarItemSelected>
+@interface ProfileViewController () <TabBarItemSelected, UICollectionViewDataSource>
+
+  @property NSMutableArray *yourPhotos;
 
 @end
+
 
 @implementation ProfileViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.yourPhotos = [NSMutableArray arrayWithObjects:@"a", "b", nil];
 }
 
 -(void)tabBarItemWasSelected
-{}
+{
 
-/*
-#pragma mark - Navigation
+    [self showProfilePhoto];
+    [self downloadThePhotosIHaveAdded];
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
+
+
+-(void)showProfilePhoto
+{
+
+
+}
+
+-(void)downloadThePhotosIHaveAdded
+{
+
+
+}
+
+
+#pragma mark CollectionView DataSource
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+
+    return 1;
+
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+
+    return 3; //[self.yourPhotos count];
+
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    CollectionViewCellForProfilePhotos *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"c" forIndexPath:indexPath];
+
+    cell.backgroundColor = [UIColor redColor];
+
+    return cell;
+}
+
 
 @end

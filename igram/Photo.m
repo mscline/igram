@@ -38,8 +38,7 @@
     photo.caption = caption;
     photo.date = [NSDate date];
 
-    UserRecord *userRecord = [UserRecord returnOurUsersUserObject];
-    photo.byUser = userRecord;  // MUST DO IN 2 STEPS!!!
+    photo.byUser = [UserRecord returnOurUsersUserObject];
 
     [photo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
 

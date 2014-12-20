@@ -34,6 +34,9 @@
 		AE146ED91A4202D700CEDB26 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE146ED81A4202D700CEDB26 /* ParseUI.framework */; };
 		AE146EDB1A42039500CEDB26 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE146EDA1A42039500CEDB26 /* Bolts.framework */; };
 		AE146EDF1A4204B100CEDB26 /* UserRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = AE146EDE1A4204B100CEDB26 /* UserRecord.m */; };
+		AE29C11C1A4517FA00E32608 /* CustomTextFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE29C11B1A4517FA00E32608 /* CustomTextFormatter.m */; };
+		AE29C1211A451A8200E32608 /* CollectionViewCellForFollowers.m in Sources */ = {isa = PBXBuildFile; fileRef = AE29C1201A451A8200E32608 /* CollectionViewCellForFollowers.m */; };
+		AE29C1241A4521B100E32608 /* CollectionViewCellForProfilePhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = AE29C1231A4521B100E32608 /* CollectionViewCellForProfilePhotos.m */; };
 		AE5009CC1A435D3700A0DCCC /* AddPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5009CB1A435D3700A0DCCC /* AddPhotosViewController.m */; };
 		AE5009CF1A435D4600A0DCCC /* FollowingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5009CE1A435D4600A0DCCC /* FollowingViewController.m */; };
 		AE5009D21A435D5200A0DCCC /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5009D11A435D5200A0DCCC /* ProfileViewController.m */; };
@@ -95,6 +98,12 @@
 		AE146EDA1A42039500CEDB26 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../Bolts.framework; sourceTree = "<group>"; };
 		AE146EDD1A4204B100CEDB26 /* UserRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserRecord.h; path = igram/UserRecord.h; sourceTree = "<group>"; };
 		AE146EDE1A4204B100CEDB26 /* UserRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserRecord.m; path = igram/UserRecord.m; sourceTree = "<group>"; };
+		AE29C11A1A4517FA00E32608 /* CustomTextFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextFormatter.h; sourceTree = "<group>"; };
+		AE29C11B1A4517FA00E32608 /* CustomTextFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextFormatter.m; sourceTree = "<group>"; };
+		AE29C11F1A451A8200E32608 /* CollectionViewCellForFollowers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCellForFollowers.h; sourceTree = "<group>"; };
+		AE29C1201A451A8200E32608 /* CollectionViewCellForFollowers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCellForFollowers.m; sourceTree = "<group>"; };
+		AE29C1221A4521B100E32608 /* CollectionViewCellForProfilePhotos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCellForProfilePhotos.h; sourceTree = "<group>"; };
+		AE29C1231A4521B100E32608 /* CollectionViewCellForProfilePhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCellForProfilePhotos.m; sourceTree = "<group>"; };
 		AE5009CA1A435D3700A0DCCC /* AddPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPhotosViewController.h; sourceTree = "<group>"; };
 		AE5009CB1A435D3700A0DCCC /* AddPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPhotosViewController.m; sourceTree = "<group>"; };
 		AE5009CD1A435D4600A0DCCC /* FollowingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowingViewController.h; sourceTree = "<group>"; };
@@ -163,7 +172,6 @@
 				AE04BA9D1A43A04700F1B6D4 /* PhotoPickerCode.m */,
 				AE9977B91A43C651005CC9EC /* MCBuildAttributedText.h */,
 				AE9977BA1A43C651005CC9EC /* MCBuildAttributedText.m */,
-				AE5009D91A43661400A0DCCC /* Login */,
 			);
 			name = "Abstracted Code";
 			path = ..;
@@ -190,10 +198,12 @@
 		AE09FAB91A4171F300841D98 /* igram */ = {
 			isa = PBXGroup;
 			children = (
-				AE04BA9F1A43A0C900F1B6D4 /* Abstracted Code */,
 				AEC6DBBB1A427A74008E968C /* Controller */,
 				AE146EDC1A42046800CEDB26 /* Model */,
 				AEC6DBBA1A427A5C008E968C /* View */,
+				AE04BA9F1A43A0C900F1B6D4 /* Abstracted Code */,
+				AE5009D91A43661400A0DCCC /* Parse Login */,
+				AE29C11D1A45180C00E32608 /* Abstracted - this app only */,
 				AE09FABA1A4171F300841D98 /* Supporting Files */,
 			);
 			path = igram;
@@ -261,7 +271,17 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		AE5009D91A43661400A0DCCC /* Login */ = {
+		AE29C11D1A45180C00E32608 /* Abstracted - this app only */ = {
+			isa = PBXGroup;
+			children = (
+				AE29C11A1A4517FA00E32608 /* CustomTextFormatter.h */,
+				AE29C11B1A4517FA00E32608 /* CustomTextFormatter.m */,
+			);
+			name = "Abstracted - this app only";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		AE5009D91A43661400A0DCCC /* Parse Login */ = {
 			isa = PBXGroup;
 			children = (
 				AE09FB011A417DA300841D98 /* ParseLoginManager.h */,
@@ -269,15 +289,20 @@
 				AE146EDD1A4204B100CEDB26 /* UserRecord.h */,
 				AE146EDE1A4204B100CEDB26 /* UserRecord.m */,
 			);
-			name = Login;
+			name = "Parse Login";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		AEC6DBBA1A427A5C008E968C /* View */ = {
 			isa = PBXGroup;
 			children = (
 				AE09FAC41A4171F300841D98 /* Main.storyboard */,
+				AE29C1221A4521B100E32608 /* CollectionViewCellForProfilePhotos.h */,
+				AE29C1231A4521B100E32608 /* CollectionViewCellForProfilePhotos.m */,
 				AEC6DBBC1A427AC7008E968C /* CollectionViewCell.h */,
 				AEC6DBBD1A427AC7008E968C /* CollectionViewCell.m */,
+				AE29C11F1A451A8200E32608 /* CollectionViewCellForFollowers.h */,
+				AE29C1201A451A8200E32608 /* CollectionViewCellForFollowers.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -405,12 +430,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE5009CF1A435D4600A0DCCC /* FollowingViewController.m in Sources */,
+				AE29C1241A4521B100E32608 /* CollectionViewCellForProfilePhotos.m in Sources */,
 				AEC6DBB61A422038008E968C /* Tag.m in Sources */,
 				AEC6DBB01A422019008E968C /* Photo.m in Sources */,
 				AEC6DBB31A42202B008E968C /* Follower.m in Sources */,
 				AE5009D21A435D5200A0DCCC /* ProfileViewController.m in Sources */,
 				AE09FAC31A4171F300841D98 /* SearchViewController.m in Sources */,
 				AEC6DBAA1A421FFD008E968C /* Comment.m in Sources */,
+				AE29C1211A451A8200E32608 /* CollectionViewCellForFollowers.m in Sources */,
 				AE5009CC1A435D3700A0DCCC /* AddPhotosViewController.m in Sources */,
 				AE146EDF1A4204B100CEDB26 /* UserRecord.m in Sources */,
 				AEC6DBAD1A42200A008E968C /* Like.m in Sources */,
@@ -421,6 +448,7 @@
 				AE5009D51A435D8800A0DCCC /* PhotoDetailViewController.m in Sources */,
 				AE9977BB1A43C651005CC9EC /* MCBuildAttributedText.m in Sources */,
 				AE09FB031A417DA300841D98 /* ParseLoginManager.m in Sources */,
+				AE29C11C1A4517FA00E32608 /* CustomTextFormatter.m in Sources */,
 				AE04BA9E1A43A04700F1B6D4 /* PhotoPickerCode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

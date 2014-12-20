@@ -8,29 +8,87 @@
 
 #import "FollowingViewController.h"
 #import "TabBarViewController.h"
+#import "CollectionViewCellForFollowers.h"
 
-@interface FollowingViewController () <TabBarItemSelected>
+
+@interface FollowingViewController () <TabBarItemSelected, UICollectionViewDataSource, UICollectionViewDelegate>
+
+  @property NSMutableArray *dataForDisplay;
 
 @end
 
+
 @implementation FollowingViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
 
 -(void)tabBarItemWasSelected
-{}
+{
+
+   // [self downloadListOfFollowers];
+    
+}
 
 /*
-#pragma mark - Navigation
+- (void)viewDidLoad {
+    [super viewDidLoad];
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [self downloadListOfFollowers];
 }
+
+
+
+-(void)downloadListOfFollowers
+{
+//    [Photo downloadPhotosWithCompletionBlock:^(NSArray *objects) {
+//
+//        [self downloadOfPhotosIsComplete:objects];
+//
+//    }];
+
+    self.dataForDisplay = @[@"a",@"b"].mutableCopy;
+
+}
+
+-(void)downloadOfPhotosIsComplete:(NSArray *)array
+{
+
+    self.dataForDisplay = array.mutableCopy;
+//    [self.collectionV reloadData];
+
+}
+
+
+#pragma mark CollectionView Data Source
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+
+    return 1;
+
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+
+    return [self.dataForDisplay count];
+
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    CollectionViewCellForFollowers *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"a" forIndexPath:indexPath];
+//
+//    Photo *photo = [self.dataForDisplay objectAtIndex:indexPath.row];
+      cell.backgroundColor = [UIColor redColor];
+//    cell.name.attributedText = [self formatLabel:photo.caption];
+//
+//    [photo downloadImageAndUpdateImageView:cell.photo forIndexPath:indexPath];
+
+    return cell;
+
+}
+
 */
 
 @end

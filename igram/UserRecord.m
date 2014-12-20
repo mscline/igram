@@ -26,7 +26,7 @@ Block completionBlock;  // for when add user for the first time
     // check to see if already have our UserRecord
     if(ourUser){ return;}
 
-    // check to see if login completed (ie, parse knows who the user is)
+    // check to see if login completed (ie, parse knows who the user is), if not return
     if(![PFUser currentUser]){ return; };
 
     
@@ -57,9 +57,15 @@ Block completionBlock;  // for when add user for the first time
 
 +(void)part2_addNewUserToDBIfRequired:(NSArray *)objects
 {
-    // if no entry, add new user & continue
-    if(objects.count != 0){ return; }
+    // if DB found a User Record, store it and exit
+    if(objects.count != 0){
 
+        ourUser = (UserRecord *)objects[0];
+        return;
+
+    }
+
+    // if not, create one
     UserRecord *theUser = [UserRecord object];
     theUser.parseUser = (PFUser *)[PFUser currentUser];
     [theUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
