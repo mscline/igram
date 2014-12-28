@@ -74,13 +74,13 @@
                                                 <exclude reference="dH8-Ve-hSs"/>
                                             </mask>
                                             <mask key="constraints">
+                                                <exclude reference="3kP-mU-0kR"/>
+                                                <exclude reference="Fhz-gl-0cw"/>
+                                                <exclude reference="drV-2L-e2L"/>
                                                 <exclude reference="7Hf-2p-4C0"/>
                                                 <exclude reference="TJA-Q8-rWd"/>
                                                 <exclude reference="eRe-R3-qsW"/>
                                                 <exclude reference="y3u-fz-nKI"/>
-                                                <exclude reference="3kP-mU-0kR"/>
-                                                <exclude reference="Fhz-gl-0cw"/>
-                                                <exclude reference="drV-2L-e2L"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact">
@@ -89,13 +89,13 @@
                                                 <include reference="dH8-Ve-hSs"/>
                                             </mask>
                                             <mask key="constraints">
+                                                <include reference="3kP-mU-0kR"/>
+                                                <include reference="Fhz-gl-0cw"/>
+                                                <include reference="drV-2L-e2L"/>
                                                 <include reference="7Hf-2p-4C0"/>
                                                 <include reference="TJA-Q8-rWd"/>
                                                 <include reference="eRe-R3-qsW"/>
                                                 <include reference="y3u-fz-nKI"/>
-                                                <include reference="3kP-mU-0kR"/>
-                                                <include reference="Fhz-gl-0cw"/>
-                                                <include reference="drV-2L-e2L"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -203,14 +203,14 @@
                                 <exclude reference="7Y5-te-1sy"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="AL6-Yg-3ur"/>
+                                <exclude reference="Tek-07-eE0"/>
                                 <exclude reference="TMO-PK-9NX"/>
                                 <exclude reference="VKh-xS-HSc"/>
                                 <exclude reference="fdM-rE-SHU"/>
                                 <exclude reference="sw0-gF-msq"/>
                                 <exclude reference="tMk-19-uYv"/>
                                 <exclude reference="2nZ-NE-jDW"/>
-                                <exclude reference="AL6-Yg-3ur"/>
-                                <exclude reference="Tek-07-eE0"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -219,14 +219,14 @@
                                 <include reference="7Y5-te-1sy"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="AL6-Yg-3ur"/>
+                                <include reference="Tek-07-eE0"/>
                                 <include reference="TMO-PK-9NX"/>
                                 <include reference="VKh-xS-HSc"/>
                                 <include reference="fdM-rE-SHU"/>
                                 <include reference="sw0-gF-msq"/>
                                 <include reference="tMk-19-uYv"/>
                                 <include reference="2nZ-NE-jDW"/>
-                                <include reference="AL6-Yg-3ur"/>
-                                <include reference="Tek-07-eE0"/>
                             </mask>
                         </variation>
                     </view>

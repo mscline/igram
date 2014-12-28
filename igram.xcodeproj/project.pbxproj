@@ -43,12 +43,15 @@
 		AE5009D51A435D8800A0DCCC /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5009D41A435D8800A0DCCC /* PhotoDetailViewController.m */; };
 		AE5009D81A435E8200A0DCCC /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5009D71A435E8200A0DCCC /* TabBarViewController.m */; };
 		AE9977BB1A43C651005CC9EC /* MCBuildAttributedText.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9977BA1A43C651005CC9EC /* MCBuildAttributedText.m */; };
+		AEB8E88E1A4793D300576247 /* ParseFile.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB8E88D1A4793D300576247 /* ParseFile.m */; };
 		AEC6DBAA1A421FFD008E968C /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6DBA91A421FFD008E968C /* Comment.m */; };
 		AEC6DBAD1A42200A008E968C /* Like.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6DBAC1A42200A008E968C /* Like.m */; };
 		AEC6DBB01A422019008E968C /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6DBAF1A422019008E968C /* Photo.m */; };
 		AEC6DBB31A42202B008E968C /* Follower.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6DBB21A42202B008E968C /* Follower.m */; };
 		AEC6DBB61A422038008E968C /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6DBB51A422038008E968C /* Tag.m */; };
 		AEC6DBBE1A427AC7008E968C /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6DBBD1A427AC7008E968C /* CollectionViewCell.m */; };
+		AEEBFE1C1A495C3300FAB164 /* LocalFile.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEBFE1B1A495C3300FAB164 /* LocalFile.m */; };
+		AEEBFE1F1A49641500FAB164 /* DownloadSharedFilesMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEBFE1E1A49641500FAB164 /* DownloadSharedFilesMgr.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +119,8 @@
 		AE5009D71A435E8200A0DCCC /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = igram/TabBarViewController.m; sourceTree = "<group>"; };
 		AE9977B91A43C651005CC9EC /* MCBuildAttributedText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCBuildAttributedText.h; sourceTree = "<group>"; };
 		AE9977BA1A43C651005CC9EC /* MCBuildAttributedText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCBuildAttributedText.m; sourceTree = "<group>"; };
+		AEB8E88C1A4793D300576247 /* ParseFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseFile.h; sourceTree = "<group>"; };
+		AEB8E88D1A4793D300576247 /* ParseFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseFile.m; sourceTree = "<group>"; };
 		AEC6DBA81A421FFD008E968C /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
 		AEC6DBA91A421FFD008E968C /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		AEC6DBAB1A42200A008E968C /* Like.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Like.h; sourceTree = "<group>"; };
@@ -128,6 +133,10 @@
 		AEC6DBB51A422038008E968C /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
 		AEC6DBBC1A427AC7008E968C /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		AEC6DBBD1A427AC7008E968C /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		AEEBFE1A1A495C3300FAB164 /* LocalFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalFile.h; sourceTree = "<group>"; };
+		AEEBFE1B1A495C3300FAB164 /* LocalFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalFile.m; sourceTree = "<group>"; };
+		AEEBFE1D1A49641500FAB164 /* DownloadSharedFilesMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadSharedFilesMgr.h; sourceTree = "<group>"; };
+		AEEBFE1E1A49641500FAB164 /* DownloadSharedFilesMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadSharedFilesMgr.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +297,7 @@
 				AE09FB021A417DA300841D98 /* ParseLoginManager.m */,
 				AE146EDD1A4204B100CEDB26 /* UserRecord.h */,
 				AE146EDE1A4204B100CEDB26 /* UserRecord.m */,
+				AEEBFE201A49641B00FAB164 /* DownloadedData */,
 			);
 			name = "Parse Login";
 			path = ..;
@@ -327,6 +337,19 @@
 			);
 			name = Controller;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		AEEBFE201A49641B00FAB164 /* DownloadedData */ = {
+			isa = PBXGroup;
+			children = (
+				AEEBFE1D1A49641500FAB164 /* DownloadSharedFilesMgr.h */,
+				AEEBFE1E1A49641500FAB164 /* DownloadSharedFilesMgr.m */,
+				AEB8E88C1A4793D300576247 /* ParseFile.h */,
+				AEB8E88D1A4793D300576247 /* ParseFile.m */,
+				AEEBFE1A1A495C3300FAB164 /* LocalFile.h */,
+				AEEBFE1B1A495C3300FAB164 /* LocalFile.m */,
+			);
+			name = DownloadedData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,9 +467,12 @@
 				AE09FAC01A4171F300841D98 /* AppDelegate.m in Sources */,
 				AE09FABD1A4171F300841D98 /* main.m in Sources */,
 				AE5009D81A435E8200A0DCCC /* TabBarViewController.m in Sources */,
+				AEB8E88E1A4793D300576247 /* ParseFile.m in Sources */,
 				AEC6DBBE1A427AC7008E968C /* CollectionViewCell.m in Sources */,
+				AEEBFE1C1A495C3300FAB164 /* LocalFile.m in Sources */,
 				AE5009D51A435D8800A0DCCC /* PhotoDetailViewController.m in Sources */,
 				AE9977BB1A43C651005CC9EC /* MCBuildAttributedText.m in Sources */,
+				AEEBFE1F1A49641500FAB164 /* DownloadSharedFilesMgr.m in Sources */,
 				AE09FB031A417DA300841D98 /* ParseLoginManager.m in Sources */,
 				AE29C11C1A4517FA00E32608 /* CustomTextFormatter.m in Sources */,
 				AE04BA9E1A43A04700F1B6D4 /* PhotoPickerCode.m in Sources */,
