@@ -10,7 +10,7 @@
 #import "TabBarViewController.h"
 #import "CollectionViewCellForProfilePhotos.h"
 
-@interface ProfileViewController () <TabBarItemSelected, UICollectionViewDataSource>
+@interface ProfileViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, TabBarItemSelected>
 
   @property NSMutableArray *yourPhotos;
 

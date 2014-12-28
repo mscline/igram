@@ -10,7 +10,6 @@
 #import "TabBarViewController.h"
 
 #import <Parse/Parse.h>
-#import "ParseLoginManager.h"
 #import "CustomTextFormatter.h"
 
 #import "UserRecord.h"
@@ -21,7 +20,6 @@
 
 @interface SearchViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, TabBarItemSelected>
 
-  @property ParseLoginManager *loginManager;
   @property NSMutableArray *dataForDisplay;
 
   @property (weak, nonatomic) IBOutlet UICollectionView *collectionV;
@@ -40,7 +38,7 @@
     [super viewDidAppear:animated];
 
     // since default view
-    [self tabBarItemWasSelected];
+    [self downloadPhotos];
 
 }
 
@@ -94,6 +92,7 @@
     cell.backgroundColor = [UIColor redColor];
     cell.caption.attributedText = [CustomTextFormatter formatLabel:photo.caption];
 
+    // we want to download the photo and update the cell when we get it
     [photo downloadImageAndUpdateImageView:cell.photo forIndexPath:indexPath];
 
     return cell;

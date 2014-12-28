@@ -30,3 +30,14 @@
   -(void)downloadImageAndUpdateImageView:(UIImageView *)view forIndexPath:(NSIndexPath *)indexPath;
 
 @end
+
+// http://cocoadocs.org/docsets/Parse/1.2.20/Classes/PFQuery.html#
+
+// ONE TO ONE'
+
+//includeKey:
+//
+//- (void)includeKey:(NSString *)key
+//Discussion
+//
+//Make the query include PFObjects that have a reference stored at the provided key. This has an effect similar to a join. You can use dot notation to specify which fields in the included object are also fetch.

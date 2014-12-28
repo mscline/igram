@@ -11,7 +11,7 @@
 #import "CollectionViewCellForFollowers.h"
 
 
-@interface FollowingViewController () <TabBarItemSelected, UICollectionViewDataSource, UICollectionViewDelegate>
+@interface FollowingViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, TabBarItemSelected>
 
   @property NSMutableArray *dataForDisplay;
 

@@ -13,6 +13,3 @@
 
 @end
 
-// EDITING
-// A:
-// B: 

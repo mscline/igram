@@ -36,12 +36,15 @@
     [super viewDidAppear:animated];
 
     self.imageView.backgroundColor = [UIColor grayColor];
+
+    // when return from picker, want to display the photo
     self.imageView.image = self.imageForDisplay;
 
 }
 
 -(void)tabBarItemWasSelected
 {}
+
 
 #pragma mark Buttons
 

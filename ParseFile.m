@@ -20,7 +20,17 @@
     // get list of file from db
 
     PFQuery *query = [ParseFile query];
-    if(typeID_stringOrNil){ //[query whereKey:<#(NSString *)#> equalTo:<#(id)#>];
+
+    if(typeID_stringOrNil){
+
+        [query whereKey:@"typeID" equalTo:typeID_stringOrNil];
+    }
+
+    if(date){
+
+        #warning UNTESTED
+        [query whereKey:@"date" greaterThan:date];
+
     }
 
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -46,14 +56,14 @@
 
 }
 
-+(void)downloadFile:(NSString *)string withCompletionBlock:(void(^)(NSError *error, NSData *theData))completionBlock
++(void)downloadFile:(NSString *)string withCompletionBlock:(void(^)(NSError *error, NSData *someData))completionBlock
 {
 
     // request data
     PFFile *fileX; //self.theDataFile;
     [fileX getDataInBackgroundWithBlock:^(NSData *rawData, NSError *error) {
 
-        completionBlock(error, theData);
+        completionBlock(error, rawData);
 
     }];
 

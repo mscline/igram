@@ -51,7 +51,7 @@
 
 +(void)addTags:(NSArray *)arry forPhoto:(Photo *)photo
 {
-
+//     [query includeKey:@"ImageFile"];
 }
 
 
@@ -72,10 +72,10 @@
 {
 
     PFQuery *query = [self query];
-    //[query whereKey:<#(NSString *)#> equalTo:<#(id)#>]
+   // [query whereKey:@"caption" equalTo:@"Orange"];  // add filter?
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
 
-        completionBlock(objects);
+        completionBlock(objects);  // Files not automatically downloaded
 
     }];
     
