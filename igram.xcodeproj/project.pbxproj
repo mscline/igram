@@ -326,14 +326,14 @@
 				AE5009D71A435E8200A0DCCC /* TabBarViewController.m */,
 				AE09FAC11A4171F300841D98 /* SearchViewController.h */,
 				AE09FAC21A4171F300841D98 /* SearchViewController.m */,
+				AE5009D31A435D8800A0DCCC /* PhotoDetailViewController.h */,
+				AE5009D41A435D8800A0DCCC /* PhotoDetailViewController.m */,
 				AE5009CA1A435D3700A0DCCC /* AddPhotosViewController.h */,
 				AE5009CB1A435D3700A0DCCC /* AddPhotosViewController.m */,
 				AE5009CD1A435D4600A0DCCC /* FollowingViewController.h */,
 				AE5009CE1A435D4600A0DCCC /* FollowingViewController.m */,
 				AE5009D01A435D5200A0DCCC /* ProfileViewController.h */,
 				AE5009D11A435D5200A0DCCC /* ProfileViewController.m */,
-				AE5009D31A435D8800A0DCCC /* PhotoDetailViewController.h */,
-				AE5009D41A435D8800A0DCCC /* PhotoDetailViewController.m */,
 			);
 			name = Controller;
 			path = ..;

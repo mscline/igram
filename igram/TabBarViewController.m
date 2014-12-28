@@ -34,20 +34,6 @@
     self.loginManager = [ParseLoginManager new];
     [self.loginManager presentLoginScreenFromRootVCsViewDidAppear:self];
 
-
-
-    // testing
-
-    [ParseFile uploadFileWithName:@"secondTrie" typeIdentifier:@"b" date:[NSDate date] completionBlock:^(NSError *error) {
-
-
-    }];
-
-    [ParseFile makeListOfFilesOnServer:@"b" afterDate:nil withCompletionBlock:^(NSError *error, NSArray *objects) {
-
-        NSLog(@"here %@", objects);
-
-    }];
 }
 
 -(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item

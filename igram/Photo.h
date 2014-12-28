@@ -19,9 +19,6 @@
   // Many to Many
   @property NSString *tags;  // ????
 
-  // Local Properties
-  @property UIImage *photoImage;  // when download, can use just grab the image here
-
 
 
   +(void)addPhoto:(UIImage *)image caption:(NSString *)caption completionBlock:(void(^)())completionBlock;

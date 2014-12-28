@@ -50,7 +50,7 @@
 
     [fileToUpload saveEventually:^(BOOL succeeded, NSError *error) {
 
-        completionBlock(error);
+        completionBlock(error);  // the documentation says there is a variation of this command which gives progress (it gives periodic updates, firing off a block you provide, passing you the % uploaded), but couldn't find it (maybe android only)
 
     }];
 
@@ -70,7 +70,13 @@
 }
 
 +(void)deleteFile:(NSString *)string withCompletionBlock:(void(^)(NSError *error, NSData *theData))completionBlock
-{}
+{
+
+    // need to use a rest API with the master key
+    // or login to parse and hit a clean up botton which will delete files that are not referenced (thus to keep the files need to reference them?)
+    // alternatively, set value to [NSNull null] to remove the data
+
+}
 
 #pragma mark PFObject Protocol Methods
 

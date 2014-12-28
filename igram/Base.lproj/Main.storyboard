@@ -31,7 +31,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="323" height="71"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pIh-t9-MnL">
@@ -337,10 +337,10 @@
             </objects>
             <point key="canvasLocation" x="-1338" y="-242"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo Detail View Controller-->
         <scene sceneID="5bN-Yh-nud">
             <objects>
-                <viewController id="OET-sD-6js" sceneMemberID="viewController">
+                <viewController id="OET-sD-6js" customClass="PhotoDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aI9-TZ-LUB"/>
                         <viewControllerLayoutGuide type="bottom" id="9gx-we-ZEl"/>
@@ -348,8 +348,33 @@
                     <view key="view" contentMode="scaleToFill" id="ns5-Bh-aOg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X2s-2j-Nmb">
+                                <rect key="frame" x="36" y="28" width="528" height="235"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="235" id="b9b-To-Toq"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="suV-ga-ddZ">
+                                <rect key="frame" x="36" y="263" width="528" height="317"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9gx-we-ZEl" firstAttribute="top" secondItem="suV-ga-ddZ" secondAttribute="bottom" constant="20" id="47e-SR-viS"/>
+                            <constraint firstItem="suV-ga-ddZ" firstAttribute="leading" secondItem="ns5-Bh-aOg" secondAttribute="leadingMargin" constant="20" id="EUh-1z-Daf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="X2s-2j-Nmb" secondAttribute="trailing" constant="20" id="NiK-P5-akf"/>
+                            <constraint firstItem="X2s-2j-Nmb" firstAttribute="leading" secondItem="ns5-Bh-aOg" secondAttribute="leadingMargin" constant="20" id="cbe-qz-hTa"/>
+                            <constraint firstItem="X2s-2j-Nmb" firstAttribute="top" secondItem="aI9-TZ-LUB" secondAttribute="bottom" constant="8" id="hcF-or-Fs0"/>
+                            <constraint firstItem="suV-ga-ddZ" firstAttribute="top" secondItem="X2s-2j-Nmb" secondAttribute="bottom" id="qXc-hK-bmY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="suV-ga-ddZ" secondAttribute="trailing" constant="20" id="tPd-N2-nA7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="X2s-2j-Nmb" id="HUN-vu-Mjg"/>
+                        <outlet property="tableView" destination="suV-ga-ddZ" id="a0U-9K-xKs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8S-0K-cHp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -380,7 +405,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="353" height="155"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBd-5N-aeJ">

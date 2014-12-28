@@ -10,8 +10,6 @@
 
 @implementation Photo
   @dynamic tags, byUser, imageFile, date, caption;
-  @synthesize photoImage;
-
 
 +(NSString *)parseClassName
 {
@@ -72,7 +70,18 @@
 {
 
     PFQuery *query = [self query];
-   // [query whereKey:@"caption" equalTo:@"Orange"];  // add filter?
+
+    [query orderByDescending:@"createdAt"];
+    //query.limit = 15;                           // how many objects to download
+
+    // get associated data
+    //[query includeKey:@"key1"];
+    //[query includeKey:@"key2"];
+    //[query includeKey:@"key3.keyInRelatedFile"];
+
+    // filter data
+    // [query whereKey:@"caption" equalTo:@"Orange"];
+
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
 
         completionBlock(objects);  // Files not automatically downloaded

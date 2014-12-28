@@ -7,12 +7,14 @@
 //
 
 #import <Parse/Parse.h>
+#import "UserRecord.h"
+#import "Photo.h"
 
 @interface Comment : PFObject <PFSubclassing>
 
-  @property NSString *rePhoto;
-  @property NSString *byUser;
-  @property NSString *onDate;
+  @property Photo *forPhoto;
+  @property UserRecord *byUser;
+  @property NSDate *onDate;
   @property NSString *commentText;
 
 @end

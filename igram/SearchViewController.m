@@ -8,6 +8,7 @@
 
 #import "SearchViewController.h"
 #import "TabBarViewController.h"
+#import "PhotoDetailViewController.h"
 
 #import <Parse/Parse.h>
 #import "CustomTextFormatter.h"
@@ -97,6 +98,19 @@
 
     return cell;
 
+}
+
+
+#pragma mark Segue
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+
+    NSIndexPath *indexPath = [self.collectionV indexPathForCell:(UICollectionViewCell *)sender];
+
+    PhotoDetailViewController *vc = segue.destinationViewController;
+    vc.photo = [self.dataForDisplay objectAtIndex:indexPath.row];
+    
 }
 
 
