@@ -12,5 +12,6 @@
 @interface PhotoDetailViewController : UIViewController
 
   @property Photo *photo;
+  @property UIImage *photoImage;  // the photo object does not actuall store the image
 
 @end

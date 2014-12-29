@@ -110,7 +110,8 @@
 
     PhotoDetailViewController *vc = segue.destinationViewController;
     vc.photo = [self.dataForDisplay objectAtIndex:indexPath.row];
-    
+    vc.photoImage = [[(CollectionViewCell *)sender photo] image];
+
 }
 
 

@@ -31,7 +31,7 @@
 
 +(void)downloadCommentsForPhoto:(Photo *)photo completionBlock:(void(^)(NSArray *downloadedObjects, NSError *error))completionBlock
 {
-    PFQuery *query = [Photo query];
+    PFQuery *query = [Comment query];
     [query whereKey:@"forPhoto" equalTo:photo];
     [query orderByDescending:@"createdAt"];
     query.limit = 100;
@@ -43,19 +43,13 @@
     }];
 }
 
-+(void)downloadPhotoForComment
-{
-
-
-}
-
 
 #pragma PFSubclassing Protocol
 
 +(NSString *)parseClassName
 {
 
-    return @"Users";
+    return @"Comments";
 
 }
 
