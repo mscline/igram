@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TabBarViewController.h"
 
-@interface FollowingViewController : UIViewController
+@interface FollowingViewController : UIViewController <TabBarItemSelected>
 
 @end

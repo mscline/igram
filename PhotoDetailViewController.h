@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Photo.h"
 
-@interface PhotoDetailViewController : UIViewController
+@interface PhotoDetailViewController : UIViewController 
 
   @property Photo *photo;
   @property UIImage *photoImage;  // the photo object does not actuall store the image

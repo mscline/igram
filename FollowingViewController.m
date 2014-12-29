@@ -28,7 +28,7 @@
     
 }
 
-/*
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -77,7 +77,7 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    CollectionViewCellForFollowers *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"a" forIndexPath:indexPath];
+    CollectionViewCellForFollowers *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"f" forIndexPath:indexPath];
 //
 //    Photo *photo = [self.dataForDisplay objectAtIndex:indexPath.row];
       cell.backgroundColor = [UIColor redColor];
@@ -89,6 +89,6 @@
 
 }
 
-*/
+
 
 @end

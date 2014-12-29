@@ -7,8 +7,8 @@
 //
 
 #import "SearchViewController.h"
-#import "TabBarViewController.h"
 #import "PhotoDetailViewController.h"
+#import "TabBarViewController.h"
 
 #import <Parse/Parse.h>
 #import "CustomTextFormatter.h"

@@ -7,14 +7,12 @@
 //
 
 #import "AddPhotosViewController.h"
-#import "TabBarViewController.h"
-#import "PhotoPickerCode.h"
 #import "MCBuildAttributedText.h"
 
 #import "Photo.h"
 
 
-@interface AddPhotosViewController () <MCCameraAndPhotoPicker, TabBarItemSelected>
+@interface AddPhotosViewController () 
 
   @property (weak, nonatomic) IBOutlet UIImageView *imageView;
   @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -43,7 +41,9 @@
 }
 
 -(void)tabBarItemWasSelected
-{}
+{
+
+}
 
 
 #pragma mark Buttons

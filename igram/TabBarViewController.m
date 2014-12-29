@@ -24,7 +24,8 @@
     [super viewDidLoad];
 
     [UserRecord createNewUserRecordIfRequired:^{}];  // this will be run again when return from login VC
-
+    self.delegate = self;
+    
 }
 
 
@@ -36,13 +37,22 @@
 
 }
 
--(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+- (void)tabBarController:(UITabBarController *)tabBarController
+ didSelectViewController:(UIViewController *)viewController
 {
 
     // tell view controller corresponding tab selected
-    id<TabBarItemSelected>selectedVC = (id)self.selectedViewController;
+    id<TabBarItemSelected>selectedVC = (id)viewController;
+
+    if([selectedVC isKindOfClass:[UINavigationController class]]){
+
+        selectedVC = (id)[(UINavigationController *)selectedVC topViewController];
+
+    }
+
     [selectedVC tabBarItemWasSelected];
-    
+
 }
+
 
 @end

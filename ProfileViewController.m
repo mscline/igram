@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.yourPhotos = [NSMutableArray arrayWithObjects:@"a", "b", nil];
+    self.yourPhotos = [NSMutableArray arrayWithObjects:@"a",@"b", nil];
 }
 
 -(void)tabBarItemWasSelected
@@ -66,7 +66,7 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    CollectionViewCellForProfilePhotos *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"c" forIndexPath:indexPath];
+    CollectionViewCellForProfilePhotos *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"p" forIndexPath:indexPath];
 
     cell.backgroundColor = [UIColor redColor];
 

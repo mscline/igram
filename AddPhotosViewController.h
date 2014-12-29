@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TabBarViewController.h"
+#import "PhotoPickerCode.h"
 
-@interface AddPhotosViewController : UIViewController
+@interface AddPhotosViewController : UIViewController <MCCameraAndPhotoPicker, TabBarItemSelected>
 
 @end

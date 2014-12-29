@@ -10,7 +10,7 @@
 
 @protocol TabBarItemSelected <NSObject>
 
-  -(void)tabBarItemWasSelected;
+  -(void)tabBarItemWasSelected; 
 
 @end
 
