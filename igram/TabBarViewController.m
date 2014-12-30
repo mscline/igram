@@ -10,6 +10,7 @@
 #import "ParseLoginManager.h"
 #import "UserRecord.h"
 #import "ParseFile.h"
+#import "Follower.h"
 
 @interface TabBarViewController () <UITabBarControllerDelegate>
 

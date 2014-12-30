@@ -20,6 +20,14 @@
 
 @implementation FollowingViewController
 
+// to show list of people can follow
+// download list of all users (parse query)
+// each user has people they are following (a one-to-many relationship)
+// which may be downloaded with our intial query using includeKey
+
+
+// show list of followers - query
+// show list of who you are following - query
 
 -(void)tabBarItemWasSelected
 {
