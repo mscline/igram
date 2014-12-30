@@ -21,6 +21,7 @@ typedef void(^Block)();
 @interface UserRecord : PFObject <PFSubclassing>
 
   @property PFUser *parseUser;
+  @property PFFile *userPhoto;
 
   +(void)createNewUserRecordIfRequired:(Block)completionBlock;
   +(UserRecord *)returnOurUsersUserObject;

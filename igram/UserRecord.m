@@ -7,9 +7,10 @@
 //
 
 #import "UserRecord.h"
+#import "PhotoPickerCode.h"
 
 @implementation UserRecord
-  @dynamic parseUser;
+  @dynamic parseUser, userPhoto;
 
 
 #pragma CLASS VARIABLES
@@ -88,7 +89,7 @@ Block completionBlock;  // for when add user for the first time
 
 
 
-#pragma mark Other Class Methods
+#pragma mark Other
 
 +(UserRecord *)returnOurUsersUserObject
 {
@@ -97,6 +98,17 @@ Block completionBlock;  // for when add user for the first time
     
 }
 
+-(void)addPhotoToUser:(UIImage *)image completionBlock:(void(^)(NSError *error))completionBlock
+{
+
+    self.userPhoto = [PhotoPickerCode createPFFileForImage:image];
+    [self saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+
+        completionBlock(error);
+
+    }];
+
+}
 
 #pragma mark PFObject Protocol Methods
 

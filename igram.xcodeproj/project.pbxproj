@@ -183,7 +183,6 @@
 				AE9977BA1A43C651005CC9EC /* MCBuildAttributedText.m */,
 			);
 			name = "Abstracted Code";
-			path = ..;
 			sourceTree = "<group>";
 		};
 		AE09FAAE1A4171F300841D98 = {
@@ -210,8 +209,7 @@
 				AEC6DBBB1A427A74008E968C /* Controller */,
 				AE146EDC1A42046800CEDB26 /* Model */,
 				AEC6DBBA1A427A5C008E968C /* View */,
-				AE04BA9F1A43A0C900F1B6D4 /* Abstracted Code */,
-				AE5009D91A43661400A0DCCC /* Parse Login */,
+				AE5009D91A43661400A0DCCC /* MCParseAddOn */,
 				AE29C11D1A45180C00E32608 /* Abstracted - this app only */,
 				AE09FABA1A4171F300841D98 /* Supporting Files */,
 			);
@@ -290,17 +288,26 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		AE5009D91A43661400A0DCCC /* Parse Login */ = {
+		AE5009D91A43661400A0DCCC /* MCParseAddOn */ = {
+			isa = PBXGroup;
+			children = (
+				AE90AF1F1A522B2200E5EA20 /* LoginAndUserRecord */,
+				AE04BA9F1A43A0C900F1B6D4 /* Abstracted Code */,
+				AEEBFE201A49641B00FAB164 /* DownloadedData */,
+			);
+			name = MCParseAddOn;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		AE90AF1F1A522B2200E5EA20 /* LoginAndUserRecord */ = {
 			isa = PBXGroup;
 			children = (
 				AE09FB011A417DA300841D98 /* ParseLoginManager.h */,
 				AE09FB021A417DA300841D98 /* ParseLoginManager.m */,
 				AE146EDD1A4204B100CEDB26 /* UserRecord.h */,
 				AE146EDE1A4204B100CEDB26 /* UserRecord.m */,
-				AEEBFE201A49641B00FAB164 /* DownloadedData */,
 			);
-			name = "Parse Login";
-			path = ..;
+			name = LoginAndUserRecord;
 			sourceTree = "<group>";
 		};
 		AEC6DBBA1A427A5C008E968C /* View */ = {

@@ -8,7 +8,6 @@
 
 #import "PhotoPickerCode.h"
 
-
 @interface PhotoPickerCode() <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
   @property UIImagePickerController *picker;
@@ -43,6 +42,16 @@
     UIImage *rawImageFromPicker = [info objectForKey:UIImagePickerControllerOriginalImage];
     [self.delegate yourNewPhotoIsHere:rawImageFromPicker];
     [Picker dismissViewControllerAnimated:YES completion:nil];
+}
+
++(PFFile *)createPFFileForImage:(UIImage *)image
+{
+
+    NSData *imageData = UIImagePNGRepresentation(image);
+    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
+
+    return imageFile;
+    
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "Photo.h"
+#import "PhotoPickerCode.h"
 
 @implementation Photo
   @dynamic tags, byUser, imageFile, date, caption;
@@ -32,7 +33,7 @@
 {
 
     Photo *photo = [Photo object];
-    photo.imageFile = [self createPFFileForImage:image];
+    photo.imageFile = [PhotoPickerCode createPFFileForImage:image];
     photo.caption = caption;
     photo.date = [NSDate date];
 
@@ -50,17 +51,6 @@
 +(void)addTags:(NSArray *)arry forPhoto:(Photo *)photo
 {
 //     [query includeKey:@"ImageFile"];
-}
-
-
-+(PFFile *)createPFFileForImage:(UIImage *)image
-{
-
-    NSData *imageData = UIImagePNGRepresentation(image);
-    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
-
-    return imageFile;
-
 }
 
 
