@@ -11,7 +11,7 @@
 
 @interface Follower : PFObject <PFSubclassing>
 
-  @property UserRecord *actor;
-  @property UserRecord *followingWhoID;
+  @property UserRecord *user;
+  @property UserRecord *followingUser;
 
 @end

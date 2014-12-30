@@ -9,14 +9,17 @@
 #import "Follower.h"
 
 @implementation Follower
-  @dynamic actor, followingWhoID;
+  @dynamic user, followingUser;
 
+#warning replace strings with define
+
+#pragma ADD AND DELETE RECORDS
 
 +(void)addPersonThatYouWantToFollow:(UserRecord *)personToFollow withCompletionBlock:(void(^)(NSError *error))completionBlock
 {
     Follower *record = [Follower object];
-    record.actor = [UserRecord returnOurUsersUserObject];
-    record.followingWhoID = personToFollow;
+    record.user = [UserRecord returnOurUsersUserObject];
+    record.followingUser = personToFollow;
 
     [record saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
 
@@ -25,33 +28,50 @@
     }];
 }
 
-+(void)removePersonFromListOfFollowers:(UserRecord *)removeME
++(void)removeFollower:(Follower *)removeME completionBlock:(void(^)(NSError *error))completionBlock
 {
 
-   /* Deleting Objects
+    [removeME deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
 
-    To delete an object from the cloud:
+        completionBlock(error);
 
-    [gameScore deleteInBackground];
-    Objective-CSwift
-    If you want to run a callback when the delete is confirmed, you can use the deleteInBackgroundWithBlock: or deleteInBackgroundWithTarget:selector: methods. If you want to block the calling thread, you can use the delete method.
-
-    You can delete a single field from an object with the removeObjectForKey method:
-
-    // After this, the playerName field will be empty
-    [gameScore removeObjectForKey:@"playerName"];
-
-    // Saves the field deletion to the Parse Cloud
-    [gameScore saveInBackground];*/
-}
-
-
-+(void)getFollowersForUserRecord
-{
+    }];
 
 }
 
 
+#pragma mark GET FOLLOWERS
+
++(void)getFollowersForUserRecord:(UserRecord *)personBeingFollowed completionBlock:(void(^)(NSError *error, NSArray *array))completionBlock
+{
+
+    PFQuery *query = [Follower query];
+    [query whereKey:@"followingUser" equalTo:personBeingFollowed];
+
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+
+        completionBlock(error, objects);
+
+    }];
+
+}
+
++(void)getListOfPeopleFollowingUser:(UserRecord *)theUser completionBlock:(void(^)(NSError *error, NSArray *array))completionBlock
+{
+
+    PFQuery *query = [Follower query];
+    [query whereKey:@"user" equalTo:theUser];
+
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+
+        completionBlock(error, objects);
+        
+    }];
+
+}
+
+
+#pragma mark PFSUBCLASS PROTOCOL METHODS
 
 +(NSString *)parseClassName
 {
