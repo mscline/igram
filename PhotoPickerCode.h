@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 // 1) create new PhotoPickerCode object and store as property (or will deallocate)
 // 2) call -presentPhotoPickerViewControllerFromVC
@@ -21,7 +22,11 @@
 
 @interface PhotoPickerCode : NSObject
 
+
   -(void)presentPhotoPickerViewControllerFromVC:(UIViewController *)vc;
+
+  // for Parse 
+  +(PFFile *)createPFFileForImage:(UIImage *)image;
 
 
 @end

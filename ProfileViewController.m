@@ -17,6 +17,8 @@
 @end
 
 
+// show your photo (and allow upload)
+
 @implementation ProfileViewController
 
 - (void)viewDidLoad {
